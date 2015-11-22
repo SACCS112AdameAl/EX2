@@ -20,19 +20,19 @@ public class Main {
 			int nDices = Integer.parseInt(JOptionPane.showInputDialog("Enter the number of dices: "));
 			int test = tDice.NumberofDices(nDices);
 			String range = tDice.SetRange(test, nDices);
-			String myChoice = (JOptionPane.showInputDialog(null, "Try to guess the range, either low or high: "));
+			String myChoice = (JOptionPane.showInputDialog(null, " Guess the range, either low or high: "));
 			winGame = tDice.GuessRange(range, myChoice);
 
-			doAgain = JOptionPane.showInputDialog("Do it again? (Y/N)").toUpperCase();
+			doAgain = JOptionPane.showInputDialog("Play it again? (Y/N)").toUpperCase();
 			while(!(doAgain.matches("[YN]+"))) 
 			{				
 				JOptionPane.showMessageDialog(null, "Error: Invalid choice.");
-				doAgain = JOptionPane.showInputDialog("Do it again? (Y/N)").toUpperCase();
+				doAgain = JOptionPane.showInputDialog("Play it again? (Y/N)").toUpperCase();
 			}
 		}while (!(doAgain.equals("N")));
 	
-		JOptionPane.showMessageDialog(null,"GoodBye!");
-		JOptionPane.showMessageDialog(null, "Your Score: " + winGame);
+		JOptionPane.showMessageDialog(null,"Ok,GoodBye!");
+		JOptionPane.showMessageDialog(null, "Your Score is: " + winGame);
 	}
 
 }
